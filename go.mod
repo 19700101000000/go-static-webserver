@@ -1,3 +1,3 @@
-module web-server
+module static-webserver
 
-go 1.13
+go 1.15
