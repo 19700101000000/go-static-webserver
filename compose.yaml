@@ -1,0 +1,15 @@
+services:
+  gopher:
+    image: golang
+    volumes:
+      - type: bind
+        source: .
+        target: /go/src
+    ports:
+      - target: 8080
+        host_ip: 0.0.0.0
+        published: 8080
+        protocol: tcp
+        mode: ingress
+    working_dir: /go/src
+    command: go run main.go
